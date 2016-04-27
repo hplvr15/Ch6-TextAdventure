@@ -25,7 +25,7 @@ public class Item
     }
     
     /**
-    
+     * The sets the item description
     */
     
     public void setItem(String itemDescription, Item name)

@@ -28,7 +28,7 @@ public class Game
     public Game() 
     {
         createRooms();
-        createItems();
+        //createItems();
         parser = new Parser();
     }
 
@@ -39,6 +39,8 @@ public class Game
     {
         Room greatHall, kitchen, roomRequirement, charms, potions,herbology, transfiguration, gryffindorCommon, 
         slytherinCommon, ravenclawCommon, hufflepuffCommon, forbiddenForest, diagonAlley, quidditchPitch, blackLake, courtYard;
+        
+        Item mandrake;
       
         // create the rooms            
         greatHall = new Room("in the Great Hall where students and teachers comes to eat");
@@ -46,10 +48,10 @@ public class Game
         roomRequirement = new Room("in a secret hidden room where things you want the most appears");
         courtYard = new Room("in the courtyard where students hangout");
         charms = new Room("in charms class ");
-        potions = new Room("in potions class");
-        transfiguration = new Room("in transfiguration class where you learn  ");
-        herbology = new Room(" in herbology class ");
-        forbiddenForest = new Room("outside the forbidden fores scared to go inside of all the dangerous and unknown creatures in there");
+        potions = new Room("in potions class where students where you learn the correct way to brew potions.");
+        transfiguration = new Room("in transfiguration class where you learn the art of changing the form and appearance of an object.");
+        herbology = new Room("in herbology class study of magical and mundane plants and fungi.");
+        forbiddenForest = new Room("outside the forbidden forest scared to go inside of all the dangerous and unknown creatures in there");
         diagonAlley = new Room("in Diagon Alley where you buy your school materials and other things you want to have");
         quidditchPitch = new Room("in quidditch pitch where the beloved game of quidditch for wizards and witches come to play");
         blackLake = new Room("standing on the edge of the black lake where the black squid resides"); 
@@ -87,7 +89,7 @@ public class Game
         herbology.setExit("north", hufflepuffCommon);
         herbology.setExit("south", roomRequirement);
         herbology.setExit("west", charms);
-
+        //mandrake.setItem("Mandrake plants with roots shape similar to humans.\nWARNING WHEN MATURE CRY CAN BE FATAL!!!", herbolo);
 
         charms.setExit("south", ravenclawCommon);
         charms.setExit("east", herbology);
@@ -107,14 +109,16 @@ public class Game
         ravenclawCommon.setExit("north", charms);
         hufflepuffCommon.setExit("south", herbology);      
     }
-
+   
+    /**
     public void createItems()
     {
         Item mandrake;
         mandrake = new Item("dsf");
         mandrake.setItem("Mandrake plants with roots shape similar to humans.\nWARNING WHEN MATURE CRY CAN BE FATAL!!!", mandrake);
     }
-    
+    */
+   
     /**
      *  Main play routine.  Loops until end of play.
      */
